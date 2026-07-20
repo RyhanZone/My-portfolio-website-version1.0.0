@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+    /* =========================
+      SITE MAX-WIDTH
+   ========================= */
+   --max-width: 1400px;
+   /* =========================
+      PRIMARY COLORS
+   ========================= */
+
+   --primary: #7CFF4D;
+   --primary-dark: #22C55E;
+   --primary-light: #A3FF7A;
+
+   --secondary: #00E5FF;
+   --secondary-dark: #06B6D4;
+
+   /* =========================
+      BACKGROUND
+   ========================= */
+
+   --bg: #09090B;
+   --bg-soft: #0B0F17;
+   --bg-card: rgba(255,255,255,0.04);
+   --bg-glass: rgba(255,255,255,0.06);
+   --resume-bg: #0C121A;
+   --resume-sidebar-bg: #141C27;
+   --resume-card-bg:#0C121B;
+
+   /* =========================
+      TEXT COLORS
+   ========================= */
+
+   --text: #FFFFFF;
+   --text-muted: #A1A1AA;
+   --menu-text: #D4D3D6;
+   --text-dim: #71717A;
+
+   /* =========================
+      BORDER
+   ========================= */
+
+   --border: rgba(255,255,255,0.08);
+   --border-soft: rgba(255,255,255,0.05);
+   --border-primary: rgba(124,255,77,0.25);
+
+   /* =========================
+      SHADOW / GLOW
+   ========================= */
+
+   --shadow-sm: 0 4px 10px rgba(0,0,0,0.3);
+   --shadow-md: 0 10px 30px rgba(0,0,0,0.4);
+   --shadow-glow: 0 0 25px rgba(124,255,77,0.35);
+   --shadow-cyan: 0 0 25px rgba(0,229,255,0.25);
+
+   /* =========================
+      GRADIENTS
+   ========================= */
+
+   --gradient-primary: linear-gradient(135deg, #7CFF4D, #00E5FF);
+   --gradient-bg: radial-gradient(circle at top, #0B0F17, #09090B);
+
+   /* =========================
+      STATUS COLORS
+   ========================= */
+
+   --success: #22C55E;
+   --warning: #FACC15;
+   --error: #EF4444;
+   --info: #3B82F6;
+
+   /* =========================
+      GLASS EFFECT
+   ========================= */
+
+   --glass: blur(12px);
+}
+@layer utilities {
+  .custom-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+
+
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #7CFF4D;
+    border-radius: 9999px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #68e43e;
+  }
+}
