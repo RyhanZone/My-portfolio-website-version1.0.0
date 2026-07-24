@@ -3,7 +3,7 @@ import Rightside from "./rightside";
 
 export default function Home() {
   return (
-    <div
+    <section
       id="home"
       className="
         max-w-[var(--max-width)]
@@ -25,6 +25,6 @@ export default function Home() {
     >
       <Leftside />
       <Rightside />
-    </div>
+    </section>
   );
 }

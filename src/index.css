@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @theme {
     /* =========================
       SITE MAX-WIDTH
@@ -75,6 +74,8 @@
    ========================= */
 
    --glass: blur(12px);
+
+   
 }
 @layer utilities {
   .custom-scroll::-webkit-scrollbar {

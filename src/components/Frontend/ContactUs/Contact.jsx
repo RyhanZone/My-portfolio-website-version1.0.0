@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="py-24 bg-[var(--resume-bg)]">
+    <section id="contact" className="py-24 bg-[var(--resume-bg)]">
       <div className="max-w-[var(--max-width)] mx-auto px-6">
         {/* HEADER */}
         <div className="mb-10">

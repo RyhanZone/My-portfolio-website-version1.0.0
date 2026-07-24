@@ -1,7 +1,7 @@
 import ServicesHeader from "./ServicesHeader";
 import ServiceCard from "./ServiceCard";
 import WhyChooseMe from "./WhyChooseMe";
-import CTASection from "./CTASection";
+// import CTASection from "./CTASection";
 
 export default function Services() {
   return (
@@ -14,7 +14,7 @@ export default function Services() {
 
         <WhyChooseMe />
 
-        <CTASection />
+        {/* <CTASection /> */}
 
       </div>
     </section>

@@ -10,10 +10,39 @@ export default function Navbar() {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+
+            setActive(id.charAt(0).toUpperCase() + id.slice(1));
+          }
+        });
+      },
+      {
+        rootMargin:"-100px 0px -50% 0px"
+      },
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
   }, []);
-  // MUNUES ARRAY
+  // MENU ARRAY
   const links = ["Home", "Resume", "Portfolio", "Services", "Contact"];
 
   // SCROLL ANIMATION
@@ -71,7 +100,9 @@ export default function Navbar() {
           ))}
         </ul>
         <button
-          onClick={()=>{scrollToSection('contact')}}
+          onClick={() => {
+            scrollToSection("contact");
+          }}
           className="
             hidden md:block
             mt-auto px-5 py-3 rounded-xl
@@ -141,9 +172,9 @@ export default function Navbar() {
             ))}
           </ul>
           <button
-            onClick={ () => {
+            onClick={() => {
               setOpen(false);
-              scrollToSection('contact');
+              scrollToSection("contact");
             }}
             className="
             mt-auto px-5 py-3 rounded-xl
