@@ -1,9 +1,8 @@
 // import AllProjecs from "./projectType/AllProjecs";
-import FullStackprojects from "./projectType/FullStackprojects";
-import FrontendProjects from "./projectType/FrontendProjects";
-import PracticeProjects from "./projectType/PracticeProjects";
+import FullStackprojects from "./projectType/AllFullstackProjects/FullStackprojects";
+import FrontendProjects from "./projectType/AllFrontendProjecs/FrontendProjects";
+import PracticeProjects from "./projectType/AllPracticeProjects/PracticeProjects";
 export default function ProjectGrid({activeFilter}) {
- 
 
   return (
     <div>
